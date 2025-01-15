@@ -2,7 +2,7 @@
 import prisma from "@/db";
 import { Register } from "./types";
 import { NextResponse } from "next/server";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 const saltRounds = 10;
 export async function Signup({ fullname, email, password }: Register) {
